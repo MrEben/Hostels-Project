@@ -1,0 +1,79 @@
+.card-ui {
+  margin-top: 2rem;
+  padding: 2rem;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr 1fr;
+  height: 90vh;
+}
+
+.card-ui .heading h2 {
+  font-weight: 800;
+  margin-top: 5rem;
+}
+.card-ui .heading h1 {
+  margin-top: 1rem;
+  font-weight: 800;
+}
+.card-ui .heading span {
+  color: var(--clr-dark-blue);
+}
+.card-ui .heading .explore-btn {
+  margin-top: 4rem;
+  background: var(--clr-green);
+  border-radius: 15px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.card-ui .heading .explore-btn svg {
+  font-size: 1.3rem;
+}
+.card-ui .heading .explore-btn div {
+  background: inherit;
+  position: absolute;
+  top: 100%;
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 0 0 2rem;
+}
+.card-ui .card-image {
+  display: grid;
+  place-items: center;
+}
+.card-ui .card-image img {
+  height: 85%;
+  width: 60%;
+  border-radius: 2rem;
+}
+@media screen and (max-width: 768px) {
+  .card-ui {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .card-ui .card-image img {
+    height: 40vh;
+    width: 70vw;
+  }
+}
+@media screen and (max-width: 600px) {
+  .card-ui {
+    grid-template-columns: 1fr;
+    height: fit-content;
+    position: relative;
+  }
+  .card-ui .heading {
+    z-index: 99;
+  }
+  .card-ui .card-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 0;
+    z-index: 2;
+    opacity: 45%;
+  }
+}

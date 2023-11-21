@@ -1,0 +1,85 @@
+.nav-bar {
+  padding: 1rem 4rem;
+  background-color: var(--clr-deep-blue);
+  color: var(--clr-white);
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  z-index: 9999;
+}
+.nav-bar ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+.nav-bar .logo {
+  display: flex;
+  align-items: center;
+  color: var(--clr-white);
+}
+.nav-bar .logo {
+  display: flex;
+}
+.nav-bar .logo h2 {
+  font-weight: 700;
+  display: flex;
+}
+.nav-bar .logo .danger {
+  color: red;
+}
+.nav-bar .app-links {
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.nav-bar .app-links svg {
+  transition: var(--transition);
+  cursor: pointer;
+}
+.nav-bar .app-links svg:hover {
+  color: var(--clr-midnight-blue);
+}
+.nav-bar .app-links > div {
+  border: 2px solid var(--clr-dark-blue);
+  height: fit-content;
+  padding: 0.27rem;
+  font-weight: 600;
+  border-radius: 5rem;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+.nav-bar .app-links div a {
+  color: var(--clr-white);
+}
+.nav-bar .app-links div:hover {
+  background: var(--clr-dark-blue);
+}
+.nav-bar .app-links h4 {
+  font-weight: 600;
+  display: flex;
+  gap: 0.3rem;
+  align-items: center;
+}
+/* =====For Small screens====== */
+
+@media screen and (max-width: 600px) {
+  .nav-bar {
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+
+  .nav-bar .app-links {
+    margin-left: 9rem;
+  }
+  .nav-bar .app-links > div {
+    padding: 0.6rem;
+    letter-spacing: normal;
+    border-radius: 2rem;
+    font-weight: 400;
+  }
+  .nav-bar .app-links h4 > span {
+    display: none;
+  }
+}

@@ -1,0 +1,57 @@
+.discover {
+  width: 100%;
+  background: var(--clr-deep-blue);
+  color: var(--clr-white);
+  padding: 2rem 0;
+}
+.discover .discover-heading h1 {
+  font-size: 1.8rem;
+  font-weight: bolder;
+}
+.discover .discover-text {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 0.4rem;
+  row-gap: 0.7rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.flip div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--clr-dark-blue);
+  padding: 0.4rem;
+  border-radius: var(--radius);
+}
+.flip-icon {
+  background-color: transparent;
+  color: var(--clr-white);
+  font-size: 1.5rem;
+  border: transparent;
+}
+.flip p {
+  border-top: 1px solid var(--clr-white);
+  margin-top: 0.7rem;
+  padding-top: 0.7rem;
+}
+.discover .discover-text .tips {
+  width: 48%;
+}
+.discover .discover-text .tips h2 {
+  background: var(--clr-dark-blue);
+  padding: 0.4rem;
+  border-radius: var(--radius);
+}
+.discover .discover-text .tips div > h4 {
+  display: none;
+}
+@media screen and (max-width: 720px) {
+  .discover .discover-text {
+    flex-direction: column;
+  }
+  .discover .discover-text .tips {
+    width: 100%;
+  }
+}
