@@ -1,7 +1,13 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 import "./nav.css";
-import { AiOutlineUser,AiFillBell,AiFillAccountBook, AiFillBook } from "react-icons/ai";
+import {
+  AiOutlineUser,
+  AiFillBell,
+  AiFillAccountBook,
+  // AiFillBook,
+} from "react-icons/ai";
+import { FaCartPlus } from "react-icons/fa";
 import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
@@ -9,7 +15,7 @@ const Navbar = () => {
       <nav>
         <div className="nav-bar">
           <ul>
-            <Link to='/' className="logo">
+            <Link to="/" className="logo">
               {/* <BsCodeSlash /> */}
               <h2>
                 Busy<span className="danger">Dev</span>
@@ -19,6 +25,7 @@ const Navbar = () => {
             <div className="app-links">
               <AiOutlineUser />
               <AiFillBell />
+              <FaCartPlus />
               <div>
                 <a to="">
                   <h4>

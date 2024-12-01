@@ -1,5 +1,5 @@
 .nav-bar {
-  padding: 1rem 4rem;
+  padding: 1.5rem 4rem;
   background-color: var(--clr-deep-blue);
   color: var(--clr-white);
   position: fixed;
@@ -44,9 +44,9 @@
 .nav-bar .app-links > div {
   border: 2px solid var(--clr-dark-blue);
   height: fit-content;
-  padding: 0.27rem;
+  padding: 0.4rem;
   font-weight: 600;
-  border-radius: 5rem;
+  border-radius: 3rem;
   letter-spacing: 2px;
   cursor: pointer;
 }
@@ -70,9 +70,6 @@
     padding: 1rem 2rem;
   }
 
-  .nav-bar .app-links {
-    margin-left: 9rem;
-  }
   .nav-bar .app-links > div {
     padding: 0.6rem;
     letter-spacing: normal;

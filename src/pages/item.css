@@ -2,8 +2,12 @@
   width: 85vw;
   margin: 2rem auto;
 }
+.items-page .btn {
+  margin-top: 0.5rem;
+  border-radius: 8px;
+}
 .items-page .hostel-details {
-  margin-top: 5rem;
+  margin-top: 6rem;
   background: var(--clr-white);
   padding: 2rem;
   box-shadow: var(--shadow);
@@ -15,7 +19,7 @@
 }
 
 .items-page .hostel-details .right img {
-  height: 45vh;
+  height: 18rem;
   border-radius: var(--radius);
 }
 .items-page .hostel-details .rooms {
@@ -34,35 +38,6 @@
 .items-page .hostel-details .right {
   position: relative;
   width: 90%;
-}
-.items-page .hostel-details .right .register {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background: var(--clr-dark-blue);
-  width: 100%;
-  height: 25%;
-  color: var(--clr-white);
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  border-radius: var(--radius);
-}
-.items-page .hostel-details .right .register input {
-  padding: 0.5rem;
-  /* border-radius: var(--radius); */
-  border: none;
-}
-.items-page .hostel-details .right .register h4 {
-  font-size: 1.1rem;
-}
-.items-page .hostel-details .offers {
-  display: grid;
-  gap: 1rem;
-}
-.items-page .hostel-details .offers .each-offer {
-  display: flex;
-  gap: 1rem;
 }
 
 .items-page .others {
@@ -159,7 +134,7 @@
   gap: 1rem;
 }
 .items-page .packages section img {
-  height: 25vh;
+  height: 100%;
   width: 14rem;
   border-radius: var(--radius);
 }
@@ -172,6 +147,7 @@
 }
 .items-page .packages .right-packages {
   position: relative;
+  height: 10rem;
   background: linear-gradient(90.21deg, #291d2687 -5.91%, #202528a0 111.58%);
 }
 .items-page .packages .right-packages img {
@@ -196,6 +172,379 @@
   width: 100%;
   height: 100%;
 }
+.checkout-page {
+  margin: 0;
+  padding: 10% 0;
+  position: relative;
+  min-height: 100vh;
+  background: #34495e;
+  display: flex;
+  justify-content: center;
+  animation: fadein 5s;
+  animation-fill-mode: forwards;
+}
+.fadeIn {
+  animation: fadein 5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+label {
+  display: block;
+}
+/* Model Container */
+
+.model {
+  width: 900px;
+  height: 700px;
+  background: white;
+  /*   font-size: 0; */
+  color: white;
+  position: relative;
+  /*   animation: slideInFromLeft 1s cubic-bezier(0.68, -0.55, 0.265, 1.55); */
+  animation-fill-mode: forwards;
+}
+
+.model:after {
+  width: 30px;
+  content: "X";
+  height: 30px;
+  color: black;
+  position: absolute;
+  text-align: center;
+  padding-top: 3px;
+  top: 0;
+  right: -30px;
+  background-color: #bdc3c7;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.room {
+  width: 50%;
+  height: 100%;
+  background: url(../assets/pexels-ketut-subiyanto-4907181.jpg) no-repeat center
+    center;
+  background-color: var(--clr-dark-blue);
+  background-size: cover;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+}
+
+.text-cover {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+}
+
+.text-cover > * {
+  margin: 10px 0;
+}
+
+.text-cover h1 {
+  font-size: 1.8rem;
+}
+
+.text-cover .price {
+  color: #e67e22;
+}
+
+.text-cover .price span {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.payment {
+  width: 50%;
+  height: 100%;
+  color: #34495e;
+  display: inline-block;
+}
+
+.receipt-box {
+  padding: 20px 20px;
+  border-bottom: 1px solid #34495e;
+}
+
+.receipt-box h3,
+.payment-info h3 {
+  margin-bottom: 2rem;
+}
+
+.payment-info {
+  padding: 20px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 8px 10px 10px;
+  margin: 15px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.checkout-page .btn {
+  padding: 15px 25px;
+  border: none;
+  color: white;
+  width: 100%;
+  display: block;
+  background: #9b59b6;
+  text-transform: uppercase;
+}
+
+.table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 1rem;
+  background-color: transparent;
+}
+
+.table td {
+  font-size: 0.8rem;
+  font-style: italic;
+  padding: 0.25rem;
+  vertical-align: top;
+}
+
+.table td:nth-child(2) {
+  text-align: right;
+}
+
+/* SEARCH RESULTS */
+
+.search-results-container {
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 4.5rem;
+  padding: 24px;
+}
+
+.filters-section {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  margin-bottom: 24px;
+}
+
+.filters-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+}
+
+.filter-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+}
+
+.filter-icon {
+  width: 16px;
+  height: 16px;
+  color: #666;
+}
+
+.filter-select {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  min-width: 120px;
+  background: white;
+}
+
+.search-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 24px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.search-button:hover {
+  background: #1d4ed8;
+}
+
+.search-button.searching {
+  opacity: 0.8;
+  cursor: not-allowed;
+}
+
+.search-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.results-count {
+  margin-bottom: 16px;
+  color: #666;
+}
+
+.no-results {
+  text-align: center;
+  padding: 48px 0;
+}
+
+.no-results-content {
+  background: #f9fafb;
+  border-radius: 8px;
+  padding: 32px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.no-results-icon {
+  width: 48px;
+  height: 48px;
+  color: #9ca3af;
+  margin-bottom: 16px;
+}
+
+.no-results h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #111;
+}
+
+.no-results p {
+  color: #666;
+}
+
+.hostel-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.hostel-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s;
+}
+.hostel-card-image img {
+  height: 200px;
+}
+.hostel-card:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hostel-header {
+  padding: 16px;
+  border-bottom: 1px solid #eee;
+}
+
+.hostel-name {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 4px 0;
+}
+
+.hostel-location {
+  color: #666;
+  margin: 0;
+}
+
+.hostel-content {
+  padding: 16px;
+}
+
+.price-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.price {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.price-period {
+  color: #666;
+  font-size: 14px;
+}
+
+.rating {
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.amenities-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.amenity-tag {
+  background: #e0f2fe;
+  color: #0369a1;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.book-button {
+  width: 100%;
+  padding: 8px 16px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.book-button:hover {
+  background: #1d4ed8;
+}
+/* SMALLL SCREENS */
+@media (max-width: 768px) {
+  .filters-content {
+    gap: 12px;
+  }
+
+  .filter-select {
+    width: 100%;
+  }
+
+  .search-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .items-page .hostel-details .details {
     grid-template-columns: 1fr;
@@ -209,43 +558,30 @@
   .items-page .packages section {
     flex-wrap: wrap;
   }
-  
 }
 @media screen and (max-width: 600px) {
-.items-page {
-  width: 90vw;
-}
-  .items-page .hostel-details .rooms{
+  .items-page {
+    width: 95vw;
+  }
+  .items-page .hostel-details .rooms {
     grid-template-columns: 1fr;
   }
-  .items-page .packages .left-packages{
+  .items-page .packages .left-packages {
     flex-wrap: wrap;
   }
-  .items-page .packages section .left-packages img{
-   display: none;
+  .items-page .packages section .left-packages img {
+    display: none;
   }
-  .card{
+  .card {
     width: 80vw;
   }
-  .items-page .hostel-details .right img{
+  .items-page .hostel-details .right img {
     opacity: 6;
     width: 82vw;
   }
-  .items-page .hostel-details .right .register {
-    /* position: relative; */
-    top: 40%;
-    height: 60%;
-    width: 82vw;
-    flex-wrap: wrap;
-    display: flex;
-    padding-left: 1rem;
-    gap: 1rem;
-  justify-content: start;
-  }
-  .items-page .hostel-details .right .register .btn{
-    margin-top: -2rem;
-  }
-  .items-page .hostel-details{
+
+  .items-page .hostel-details {
     padding: 1rem;
+    margin-top: 4.7rem;
   }
 }

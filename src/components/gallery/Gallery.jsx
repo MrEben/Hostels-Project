@@ -1,5 +1,5 @@
 import React from "react";
-import { images } from "../data";
+import { hostelsdata } from "../data";
 import { FaInstagram, FaOpencart } from "react-icons/fa";
 import "./gallery.css";
 import { Link } from "react-router-dom";
@@ -11,7 +11,7 @@ const Gallery = () => {
         <p>Discover popular hostels in and around KNUST campus</p>
       </div>
       <div className="gallery">
-        {images.map((item, index) => {
+        {hostelsdata.map((item, index) => {
           return (
             <div className="gallery-innerbox" key={index}>
               <img src={item.image} alt="" />

@@ -2,6 +2,10 @@ import Navbar from "./components/navbar/Navbar";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 import ItemPage from "./pages/ItemPage";
+import CheckoutPage from "./pages/CheckoutPge";
+import Search from "./pages/SearchResults";
+import { AppProvider } from "./components/context";
+
 import {
   BrowserRouter as Router,
   Routes,
@@ -20,16 +24,20 @@ const ScrollToTop = () => {
 function App() {
   return (
     <>
-      <Router>
-        <ScrollToTop />
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Header />} />
-          <Route path="/item/:id" element={<ItemPage />} />
-        </Routes>
+      <AppProvider>
+        <Router>
+          <ScrollToTop />
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Header />} />
+            <Route path="/search" element={<Search />} />
+            <Route path="/item/:id" element={<ItemPage />} />
+            <Route path="/checkout/:id" element={<CheckoutPage />} />
+          </Routes>
 
-        <Footer />
-      </Router>
+          <Footer />
+        </Router>
+      </AppProvider>
     </>
   );
 }

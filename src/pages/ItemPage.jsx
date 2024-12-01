@@ -8,25 +8,30 @@ import {
   AiFillClockCircle,
 } from "react-icons/ai";
 import Img from "../assets/pexels-ketut-subiyanto-4907181.jpg";
-import { room, images } from "../components/data";
-import { useParams } from "react-router-dom";
+import { room, hostelsdata } from "../components/data";
+import { useParams, Link } from "react-router-dom";
+import BookingPanel from "../components/ui/bookingpanel";
+import { useGlobalContext } from "../components/context";
 
 const ItemPage = () => {
   const { id } = useParams();
-  const [hostName, sethostName] = useState("Default");
-  const [hostImage, sethostImage] = useState("");
+  const [selectedHostel, setSelectedHostel] = useState({});
+  const { setBookingDetails } = useGlobalContext();
+
   useEffect(() => {
-    const newHostel = images.find((item) => item.name == id);
-    sethostName(newHostel.name);
-    sethostImage(newHostel.image);
+    const newHostel = hostelsdata.find((item) => item.name == id);
+    setSelectedHostel(newHostel);
   }, [id]);
 
+  const handleBookingChange = (details) => {
+    setBookingDetails(details);
+  };
   return (
     <main className="items-page">
       <div className="hostel-details">
         <div className="details">
           <div className="left">
-            <h1>{hostName} Hostel</h1>
+            <h1>{selectedHostel?.name} Hostel</h1>
             <div className="ratings">
               <AiFillStar />
               <AiFillStar />
@@ -37,7 +42,7 @@ const ItemPage = () => {
               A place where you'll feel the most comfortable
             </div>
             <h3>Hostel Accomodation comes with:</h3>
-            <div className="offers">
+            {/* <div className="offers">
               <div className="each-offer">
                 <AiOutlineWifi />
                 Free WiFi
@@ -54,19 +59,26 @@ const ItemPage = () => {
                 <AiFillClockCircle />
                 Free WiFi
               </div>
+            </div> */}
+            <div className="amenities-list">
+              {/* {Object.keys(selectedHostel.amenities)} */}
+              {/* {selectedHostel.amenities} */}
+              {selectedHostel.amenities?.map((amenity, index) => (
+                <span key={index} className="amenity-tag">
+                  {amenity}
+                </span>
+              ))}
             </div>
+            <BookingPanel
+              hostelData={hostelsdata.find((item) => item.name === id)}
+              onBookingChange={handleBookingChange}
+            />
+            <Link to={`/checkout/${selectedHostel?.name}`}>
+              <button className="btn">Book Room</button>
+            </Link>
           </div>
           <div className="right">
-            <img src={hostImage} alt="" />
-            <div className="register">
-              <div>
-                <h4>Check-in</h4> <input type="date" name="" id="" />
-              </div>
-              <div>
-                <h4>Check-out</h4> <input type="date" name="" id="" />
-              </div>
-              <button className="btn">Register</button>
-            </div>
+            <img src={selectedHostel?.image} alt="" />
           </div>
         </div>
         <div className="rooms">

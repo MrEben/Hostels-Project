@@ -48,7 +48,6 @@
   transition: var(--transition);
 }
 .gallery .gallery-innerbox .inner-text a:hover {
-
   background: var(--clr-black);
   color: var(--clr-white);
 }

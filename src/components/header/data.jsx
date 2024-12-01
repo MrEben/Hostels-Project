@@ -6,7 +6,7 @@ export const hostels = [
   {
     id: 1,
     img: Img,
-    hostelName: "Continental Hostel, Ayeduase",
+    hostelName: "Carinental Hostel, Ayeduase",
     ratings: "5 star hostel",
   },
   {

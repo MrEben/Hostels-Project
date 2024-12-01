@@ -7,6 +7,7 @@
   --clr-dark-blue: #274472;
   --clr-deep-blue: #0b1d39;
   --clr-baby-blue: #c3e0e5;
+  --btn-color: #2563eb;
   --clr-green: #28a212;
   --container-width-lg: 95%;
   --container-width-md: 90%;
@@ -69,7 +70,7 @@ img {
   width: max-content;
   display: inline-block;
   color: var(--clr-white);
-  background: var(--clr-dark-blue);
+  background: var(--btn-color);
   padding: 0.8rem 1.1rem;
   border-radius: 0 0.4rem 0.4rem 0;
   cursor: pointer;

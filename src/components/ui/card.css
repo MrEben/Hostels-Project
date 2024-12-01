@@ -1,10 +1,10 @@
 .card-ui {
   margin-top: 2rem;
-  padding: 2rem;
+  padding: 3rem 2rem;
   display: grid;
   gap: 2rem;
   grid-template-columns: 1fr 1fr;
-  height: 90vh;
+  height: fit-content;
 }
 
 .card-ui .heading h2 {
@@ -43,7 +43,7 @@
   place-items: center;
 }
 .card-ui .card-image img {
-  height: 85%;
+  height: 25rem;
   width: 60%;
   border-radius: 2rem;
 }
