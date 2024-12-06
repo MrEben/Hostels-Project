@@ -8,17 +8,6 @@ const HostelSearchResults = () => {
   const { bookingDetails, setBookingDetails } = useGlobalContext();
   const [hostels, setHostels] = useState(hostelsdata);
   const [searchWord, setSearchWord] = useState("");
-  // const [filters, setFilters] = useState({
-  //   occupancy: "1",
-  //   duration: "1 year",
-  //   gender: "all",
-  // });
-
-  // const [bookingDetails, setBookingDetails] = useState({
-  //   roomType: "1 in a room",
-  //   duration: 1,
-  //   gender: "all",
-  // });
 
   const calculatePrice = (hostel) => {
     if (!hostel?.prices) {
@@ -130,11 +119,11 @@ const HostelSearchResults = () => {
             {isSearching ? "Searching..." : "Search"}
           </button>
           <button
-            className={`search-button ${isSearching ? "searching" : ""}`}
+            className={`search-button`}
             onClick={clearFilters}
             disabled={isSearching}
           >
-            Clear
+            Clear filters
           </button>
         </div>
       </div>
@@ -169,8 +158,10 @@ const HostelSearchResults = () => {
                 <img src={hostel.image} alt={hostel.name} srcSet="" />
               </div>
               <div className="hostel-header">
-                <h2 className="hostel-name">{hostel.name} Hostel</h2>
-                <p className="hostel-location">{hostel.location}</p>
+                <Link to={`/item/${hostel.name}`}>
+                  <h2 className="hostel-name">{hostel.name} Hostel</h2>
+                  <p className="hostel-location">{hostel.location}</p>
+                </Link>
               </div>
               <div className="hostel-content">
                 <div className="price-container">
