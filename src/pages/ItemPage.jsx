@@ -12,11 +12,12 @@ import { room, hostelsdata } from "../components/data";
 import { useParams, Link } from "react-router-dom";
 import BookingPanel from "../components/ui/bookingpanel";
 import { useGlobalContext } from "../components/context";
+import AnimatedWebsite from "../components/animated-website";
 
 const ItemPage = () => {
   const { id } = useParams();
   const [selectedHostel, setSelectedHostel] = useState({});
-  const { setBookingDetails } = useGlobalContext();
+  const { bookingDetails, setBookingDetails } = useGlobalContext();
 
   useEffect(() => {
     const newHostel = hostelsdata.find((item) => item.name == id);
@@ -26,6 +27,17 @@ const ItemPage = () => {
   const handleBookingChange = (details) => {
     setBookingDetails(details);
   };
+  const calculatePrice = () => {
+    if (!selectedHostel?.prices) {
+      return 0;
+    }
+    const priceKey = bookingDetails.roomType;
+    const basePrice = selectedHostel.prices[priceKey];
+    return basePrice * bookingDetails.duration;
+  };
+
+  const tax = 10;
+  const subtotal = calculatePrice();
   return (
     <main className="items-page">
       <div className="hostel-details">
@@ -42,37 +54,22 @@ const ItemPage = () => {
               A place where you'll feel the most comfortable
             </div>
             <h3>Hostel Accomodation comes with:</h3>
-            {/* <div className="offers">
-              <div className="each-offer">
-                <AiOutlineWifi />
-                Free WiFi
-              </div>
-              <div className="each-offer">
-                <AiFillSwitcher />
-                Pool
-              </div>
-              <div className="each-offer">
-                <AiFillCloud />
-                Free WiFi
-              </div>
-              <div className="each-offer">
-                <AiFillClockCircle />
-                Free WiFi
-              </div>
-            </div> */}
+
             <div className="amenities-list">
-              {/* {Object.keys(selectedHostel.amenities)} */}
-              {/* {selectedHostel.amenities} */}
               {selectedHostel.amenities?.map((amenity, index) => (
                 <span key={index} className="amenity-tag">
                   {amenity}
                 </span>
               ))}
             </div>
+            <div>
+              <span className="price">GHC{subtotal.toLocaleString()}</span>
+            </div>
             <BookingPanel
               hostelData={hostelsdata.find((item) => item.name === id)}
               onBookingChange={handleBookingChange}
             />
+
             <Link to={`/checkout/${selectedHostel?.name}`}>
               <button className="btn">Book Room</button>
             </Link>
@@ -166,6 +163,7 @@ const ItemPage = () => {
           </div>
         </div>
       </div>
+      <AnimatedWebsite />
     </main>
   );
 };

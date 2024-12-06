@@ -70,15 +70,15 @@ const CheckoutPage = () => {
                     {bookingDetails.roomType} for {bookingDetails.duration} year
                     {bookingDetails.duration > 1 ? "s" : ""}
                   </td>
-                  <td>{subtotal.toLocaleString()} GHC</td>
+                  <td>GHC {subtotal.toLocaleString()}</td>
                 </tr>
                 <tr>
                   <td>Discount</td>
-                  <td>0 GHC</td>
+                  <td>GHC 0</td>
                 </tr>
                 <tr>
                   <td>Subtotal</td>
-                  <td>{subtotal.toLocaleString()} GHC</td>
+                  <td>GHC {subtotal.toLocaleString()}</td>
                 </tr>
                 <tr>
                   <td>Tax</td>
@@ -88,7 +88,7 @@ const CheckoutPage = () => {
               <tfoot>
                 <tr>
                   <td>Total</td>
-                  <td>{total.toLocaleString()} GHC</td>
+                  <td>GHC {total.toLocaleString()} </td>
                 </tr>
               </tfoot>
             </table>
