@@ -77,7 +77,16 @@ header .header-right svg {
 header .header-right h1 {
   letter-spacing: 1px;
   font-size: 3.5rem;
+  animation: slideInFromTop 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   font-weight: 900;
+}
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 header .header-right span {
   color: var(--clr-dark-blue);
@@ -150,9 +159,8 @@ header .header-right .btn:hover {
     /* height: 4rem; */
     width: fit-content;
     display: flex;
-
     gap: 0.5rem;
-    padding: 0.5rem 0.2rem;
+    /* padding: 0.2rem 0.2rem; */
     border-radius: var(--radius);
     margin-top: 1rem;
   }

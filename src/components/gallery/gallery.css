@@ -8,6 +8,9 @@
   grid-template-columns: 20% 20% 20% 20%;
   gap: 3% 6%;
 }
+#gallery {
+  scroll-margin-top: 6rem;
+}
 .gallery .gallery-innerbox {
   position: relative;
   cursor: pointer;

@@ -3,7 +3,6 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa"; // Import arrow icon
 import "swiper/css";
 import "./header.css";
 import { AiFillCode } from "react-icons/ai";
-import { hostels } from "./data";
 import Gallery from "../gallery/Gallery";
 import Card from "../ui/card";
 import Discover from "../discover/Discover";
@@ -70,7 +69,7 @@ const Header = () => {
           <BookingPanel />
 
           <Link to="search">
-            <button className="btn">Book Room</button>
+            <button className="btn">Check Availability</button>
           </Link>
         </div>
       </header>
