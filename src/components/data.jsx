@@ -13,10 +13,12 @@ import Img11 from "../assets/pexels-ketut-subiyanto-4907235 (FILEminimizer).jpg"
 // export const images = [Img1, Img2, Img3, Img4, Img5, Img6, Img7, Img8];
 export const hostelsdata = [
   {
-    name: "Bodombi",
+    name: "Prestige",
     location: "Kotei",
     image: Img1,
     ratings: "5 star hostel",
+    description:
+      "Experience comfort and convenience at Prestige Hostel. Located in the heart of downtown, we offer modern amenities and a vibrant community atmosphere perfect for long-term stays.",
     instagram: "bodombi_bihostel",
     capacity: {
       "1 in a room": "4 rooms",
@@ -36,10 +38,12 @@ export const hostelsdata = [
     amenities: ["WiFi", "Kitchen", "Laundry"],
   },
   {
-    name: "Carinental",
+    name: "Wonders",
     image: Img2,
     location: "Boadi",
     ratings: "5 star hostel",
+    description:
+      "Experience comfort and convenience at Wonders Hostel. Located in the heart of downtown, we offer modern amenities and a vibrant community atmosphere perfect for long-term stays.",
     instagram: "_carinentalhostel",
     capacity: {
       "1 in a room": "6 rooms",
@@ -63,6 +67,8 @@ export const hostelsdata = [
     image: Img3,
     location: "Kotei",
     ratings: "5 star hostel",
+    description:
+      "Experience comfort and convenience at Sunny Side Hostel. Located in the heart of downtown, we offer modern amenities and a vibrant community atmosphere perfect for long-term stays.",
     instagram: "z_towers",
     capacity: {
       "1 in a room": "5 rooms",
@@ -82,10 +88,12 @@ export const hostelsdata = [
     amenities: ["WiFi", "Kitchen", "Laundry"],
   },
   {
-    name: "Caman",
+    name: "Calyx",
     image: Img4,
     location: "Campus",
     ratings: "5 star hostel",
+    description:
+      "Experience comfort and convenience at Calyx Hostel. Located in the heart of downtown, we offer modern amenities and a vibrant community atmosphere perfect for long-term stays.",
     instagram: "cam_an",
     capacity: {
       "1 in a room": "4 rooms",
@@ -105,10 +113,12 @@ export const hostelsdata = [
     amenities: ["WiFi", "Breakfast", "Security Lockers"],
   },
   {
-    name: "Benest",
+    name: "Beauty",
     image: Img5,
     location: "Boadi",
     ratings: "5 star hostel",
+    description:
+      "Experience comfort and convenience at Beauty Hostel. Located in the heart of downtown, we offer modern amenities and a vibrant community atmosphere perfect for long-term stays.",
     instagram: "adom_bihostel",
     capacity: {
       "1 in a room": "5 rooms",
@@ -132,6 +142,8 @@ export const hostelsdata = [
     image: Img6,
     location: "Kotei",
     ratings: "5 star hostel",
+    description:
+      "Experience comfort and convenience at Sunny Side Hostel. Located in the heart of downtown, we offer modern amenities and a vibrant community atmosphere perfect for long-term stays.",
     instagram: "splendid_hostel",
     capacity: {
       "1 in a room": "6 rooms",
@@ -155,6 +167,8 @@ export const hostelsdata = [
     image: Img7,
     location: "Ayeduase",
     ratings: "5 star hostel",
+    description:
+      "Experience comfort and convenience at Sunny Side Hostel. Located in the heart of downtown, we offer modern amenities and a vibrant community atmosphere perfect for long-term stays.",
     instagram: "east_end",
     capacity: {
       "1 in a room": "5 rooms",
@@ -178,6 +192,8 @@ export const hostelsdata = [
     image: Img8,
     location: "Emina",
     ratings: "5 star hostel",
+    description:
+      "Experience comfort and convenience at Sunny Side Hostel. Located in the heart of downtown, we offer modern amenities and a vibrant community atmosphere perfect for long-term stays.",
     instagram: "heaven_hostel",
     capacity: {
       "1 in a room": "4 rooms",

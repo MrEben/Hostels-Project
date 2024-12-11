@@ -3,6 +3,7 @@ import { hostelsdata } from "../data";
 import { FaInstagram, FaOpencart } from "react-icons/fa";
 import "./gallery.css";
 import { Link } from "react-router-dom";
+
 const Gallery = () => {
   return (
     <div className="hostels-display container" id="gallery">
@@ -10,6 +11,7 @@ const Gallery = () => {
         <h1>Get inspired</h1>
         <p>Discover popular hostels in and around KNUST campus</p>
       </div>
+
       <div className="gallery">
         {hostelsdata.map((item, index) => {
           return (
