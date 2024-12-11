@@ -1,24 +1,18 @@
 import React, { useState, useEffect } from "react";
 import "./item.css";
-import {
-  AiFillStar,
-  AiOutlineWifi,
-  AiFillSwitcher,
-  AiFillCloud,
-  AiFillClockCircle,
-} from "react-icons/ai";
+import { FaMapPin, FaStar } from "react-icons/fa";
 import Img from "../assets/pexels-ketut-subiyanto-4907181.jpg";
 import { room, hostelsdata } from "../components/data";
 import { useParams, Link } from "react-router-dom";
 import BookingPanel from "../components/ui/bookingpanel";
 import { useGlobalContext } from "../components/context";
-import AnimatedWebsite from "../components/animated-website";
+import HostelDetails from "./hostel-details";
 
 const ItemPage = () => {
   const { id } = useParams();
   const [selectedHostel, setSelectedHostel] = useState({});
   const { bookingDetails, setBookingDetails } = useGlobalContext();
-
+  // http://localhost:5173/item/East%20End what i see in the conslode producing the error
   useEffect(() => {
     const newHostel = hostelsdata.find((item) => item.name == id);
     setSelectedHostel(newHostel);
@@ -36,7 +30,6 @@ const ItemPage = () => {
     return basePrice * bookingDetails.duration;
   };
 
-  const tax = 10;
   const subtotal = calculatePrice();
   return (
     <main className="items-page">
@@ -44,11 +37,16 @@ const ItemPage = () => {
         <div className="details">
           <div className="left">
             <h1>{selectedHostel?.name} Hostel</h1>
+            <div className="location">
+              <FaMapPin className="location-icon" />
+              <span>{selectedHostel?.location}</span>
+            </div>
+            {/* work on this to display proper ratings */}
             <div className="ratings">
-              <AiFillStar />
-              <AiFillStar />
-              <AiFillStar />
-              <AiFillStar />
+              <FaStar />
+              <FaStar />
+              <FaStar />
+              <FaStar />
             </div>
             <div className="hostel-desc">
               A place where you'll feel the most comfortable
@@ -63,7 +61,15 @@ const ItemPage = () => {
               ))}
             </div>
             <div>
-              <span className="price">GHC{subtotal.toLocaleString()}</span>
+              <span className="price">GHC{subtotal.toLocaleString()} </span>
+              <span className="price-period">
+                for{" "}
+                {bookingDetails.duration == 2
+                  ? "2 years"
+                  : bookingDetails.duration == 0.5
+                  ? "6 months"
+                  : "1 year"}
+              </span>
             </div>
             <BookingPanel
               hostelData={hostelsdata.find((item) => item.name === id)}
@@ -78,11 +84,12 @@ const ItemPage = () => {
             <img src={selectedHostel?.image} alt="" />
           </div>
         </div>
-        <div className="rooms">
+        <HostelDetails singlehostel={selectedHostel} />
+        {/* <div className="rooms">
           {room.map((item, index) => {
             return <img key={index} src={item} alt="" />;
           })}
-        </div>
+        </div> */}
       </div>
       <div className="packages">
         <div className="packages-head">
@@ -163,7 +170,7 @@ const ItemPage = () => {
           </div>
         </div>
       </div>
-      <AnimatedWebsite />
+      {/* <AnimatedWebsite /> */}
     </main>
   );
 };

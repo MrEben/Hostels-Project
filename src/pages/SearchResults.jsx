@@ -58,6 +58,8 @@ const HostelSearchResults = () => {
   return (
     <div className="search-results-container">
       {/* Filters Section */}
+      {/* include sort options allowing use to sort in alphteical order or from highest to lowest pricing */}
+      {/* add location filtering */}
       <div className="filters-section">
         <div className="filters-content">
           {/* search input to filter based on the searched words */}

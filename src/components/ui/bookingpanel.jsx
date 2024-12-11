@@ -31,6 +31,7 @@ const BookingPanel = ({ hostelData, onBookingChange }) => {
           >
             <option value={1}>One year</option>
             <option value={2}>Two years</option>
+            <option value={0.5}>6 months</option>
           </select>
         </div>
         <div>
