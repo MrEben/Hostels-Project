@@ -70,7 +70,7 @@ img {
   width: max-content;
   display: inline-block;
   color: var(--clr-white);
-  background: var(--btn-color);
+  background: var(--clr-dark-blue);
   padding: 0.8rem 1.1rem;
   border-radius: 0 0.4rem 0.4rem 0;
   cursor: pointer;
@@ -82,8 +82,8 @@ img {
 }
 
 .btn:hover {
-  background: var(--clr-light-blue);
-  color: var(--clr-black);
+  background: var(--clr-midnight-blue);
+  /* color: var(--clr-black); */
 }
 
 /* =====For Medium screens====== */
