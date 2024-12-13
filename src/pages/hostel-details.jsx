@@ -105,21 +105,22 @@ const HostelDetails = ({ singlehostel }) => {
               <div key={room.id} className="room-tour">
                 <h3>{room.name}</h3>
                 {/* from panelllum */}
-                <iframe
+                {/* <iframe
                   width="600"
                   height="400"
                   allowfullscreen
                   style="border-style:none;"
                   src="https://cdn.pannellum.org/2.5/pannellum.htm#panorama=https%3A//i.ibb.co/4Sk47Z1/shot-panoramic-composition-living-room-2-1.jpg&title=Hostel"
-                ></iframe>
+                ></iframe> */}
                 {/* from render stuff online */}
-                {/* <iframe
+                <iframe
                   width="900"
                   height="700"
                   title="Hostel "
                   scrolling="no"
-                  src="https://renderstuff.com/tools/360-panorama-web-viewer-embed/?image=https://i.ibb.co/BffgNHH/shot-panoramic-composition-living-room-23-2150315646.jpg"
-                ></iframe> */}
+                  // src="https://renderstuff.com/tools/360-panorama-web-viewer-embed/?image=https://i.ibb.co/BffgNHH/shot-panoramic-composition-living-room-23-2150315646.jpg"
+                  src="https://i.ibb.co/4Sk47Z1/shot-panoramic-composition-living-room-2-1.jpg"
+                ></iframe>
                 {/* Using Google VR Viewer for each room */}
                 {/* <GoogleVRViewer image="https://storage.googleapis.com/vrview/examples/coral.jpg" /> */}
               </div>
