@@ -4,32 +4,32 @@ import Img from "../assets/empty-room-without-furniture-full-seamless-spherical-
 import "./item.css";
 
 // Google VR Viewer Component
-const GoogleVRViewer = ({ image }) => {
-  const vrViewRef = useRef(null);
+// const GoogleVRViewer = ({ image }) => {
+//   const vrViewRef = useRef(null);
 
-  useEffect(() => {
-    if (vrViewRef.current) {
-      // Use the element's ID as a CSS selector string instead of passing the DOM element directly
-      new VRView.Player(`#${vrViewRef.current.id}`, {
-        image: image, // Path to your 360° image
-        width: "100%", // Full width
-        height: "500px", // Fixed height
-        is_stereo: false, // Set to true if using a stereo image
-      });
-    }
-  }, [image]);
+//   useEffect(() => {
+//     if (vrViewRef.current) {
+//       // Use the element's ID as a CSS selector string instead of passing the DOM element directly
+//       new VRView.Player(`#${vrViewRef.current.id}`, {
+//         image: image, // Path to your 360° image
+//         width: "100%", // Full width
+//         height: "500px", // Fixed height
+//         is_stereo: false, // Set to true if using a stereo image
+//       });
+//     }
+//   }, [image]);
 
-  return (
-    <div>
-      <h2>360° Panorama Viewer</h2>
-      <div
-        id="vr-view-container"
-        ref={vrViewRef}
-        style={{ width: "100%", height: "500px" }}
-      ></div>
-    </div>
-  );
-};
+//   return (
+//     <div>
+//       <h2>360° Panorama Viewer</h2>
+//       <div
+//         id="vr-view-container"
+//         ref={vrViewRef}
+//         style={{ width: "100%", height: "500px" }}
+//       ></div>
+//     </div>
+//   );
+// };
 
 const HostelDetails = ({ singlehostel }) => {
   const [activeTab, setActiveTab] = useState("overview");
@@ -94,7 +94,6 @@ const HostelDetails = ({ singlehostel }) => {
               <h2>About this Hostel</h2>
               <p>{singlehostel?.description}</p>
             </div>
-            <GoogleVRViewer image="https://storage.googleapis.com/vrview/examples/coral.jpg" />
           </div>
         )}
 
@@ -105,6 +104,13 @@ const HostelDetails = ({ singlehostel }) => {
             {hostel.rooms.map((room) => (
               <div key={room.id} className="room-tour">
                 <h3>{room.name}</h3>
+                <iframe
+                  width="900"
+                  height="700"
+                  title="Hostel "
+                  scrolling="no"
+                  src="https://renderstuff.com/tools/360-panorama-web-viewer-embed/?image=https://i.ibb.co/BffgNHH/shot-panoramic-composition-living-room-23-2150315646.jpg"
+                ></iframe>
                 {/* Using Google VR Viewer for each room */}
                 {/* <GoogleVRViewer image="https://storage.googleapis.com/vrview/examples/coral.jpg" /> */}
               </div>
