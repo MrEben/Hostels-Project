@@ -110,7 +110,7 @@ const HostelDetails = ({ singlehostel }) => {
                   height="400"
                   allowfullscreen
                   style="border-style:none;"
-                  src="https://cdn.pannellum.org/2.5/pannellum.htm#panorama=https%3A//i.ibb.co/yYjSr7S/shot-panoramic-composition-living-room.jpg&title=Hostel"
+                  src="https://cdn.pannellum.org/2.5/pannellum.htm#panorama=https%3A//i.ibb.co/4Sk47Z1/shot-panoramic-composition-living-room-2-1.jpg&title=Hostel"
                 ></iframe>
                 {/* from render stuff online */}
                 {/* <iframe
