@@ -20,6 +20,7 @@ export const hostelsdata = [
     description:
       "Experience comfort and convenience at Prestige Hostel. Located in the heart of downtown, we offer modern amenities and a vibrant community atmosphere perfect for long-term stays.",
     instagram: "bodombi_bihostel",
+    // work  on making the capacity significant
     capacity: {
       "1 in a room": "4 rooms",
       "2 in a room": "8 rooms",
@@ -36,6 +37,12 @@ export const hostelsdata = [
     availableRooms: 3,
     gender: "mixed",
     amenities: ["WiFi", "Kitchen", "Laundry"],
+    paranoma: {
+      "single-room":
+        "https://i.ibb.co/sWBsnR8/shot-panoramic-composition-living-room.jpg",
+      "double-room":
+        "https://i.ibb.co/5KyJj4Z/shot-panoramic-composition-bedroom-1.jpg",
+    },
   },
   {
     name: "Wonders",
@@ -61,6 +68,12 @@ export const hostelsdata = [
     availableRooms: 2,
     gender: "male",
     amenities: ["WiFi", "Game Room", "24/7 Reception"],
+    paranoma: {
+      "single-room":
+        "https://i.ibb.co/bRLRnzV/shot-panoramic-composition-living-room-1-2.jpg",
+      "double-room":
+        "https://i.ibb.co/5KyJj4Z/shot-panoramic-composition-bedroom-1.jpg",
+    },
   },
   {
     name: "Z. Towers",
@@ -86,6 +99,12 @@ export const hostelsdata = [
     availableRooms: 3,
     gender: "mixed",
     amenities: ["WiFi", "Kitchen", "Laundry"],
+    paranoma: {
+      "single-room":
+        "https://i.ibb.co/FbbPLNQ/shot-panoramic-composition-bedroom.jpg",
+      "double-room":
+        "https://i.ibb.co/5KyJj4Z/shot-panoramic-composition-bedroom-1.jpg",
+    },
   },
   {
     name: "Calyx",
@@ -111,6 +130,12 @@ export const hostelsdata = [
     availableRooms: 5,
     gender: "female",
     amenities: ["WiFi", "Breakfast", "Security Lockers"],
+    paranoma: {
+      "single-room":
+        "https://i.ibb.co/thc8W6R/shot-panoramic-composition-library-1.jpg",
+      "double-room":
+        "https://i.ibb.co/5KyJj4Z/shot-panoramic-composition-bedroom-1.jpg",
+    },
   },
   {
     name: "Beauty",
@@ -136,6 +161,12 @@ export const hostelsdata = [
     availableRooms: 3,
     gender: "mixed",
     amenities: ["WiFi", "Kitchen", "Laundry"],
+    paranoma: {
+      "single-room":
+        "https://i.ibb.co/thc8W6R/shot-panoramic-composition-library-1.jpg",
+      "double-room":
+        "https://i.ibb.co/dPXF2Y1/shot-panoramic-composition-bathroom-1.jpg",
+    },
   },
   {
     name: "Splendid",
@@ -161,6 +192,12 @@ export const hostelsdata = [
     availableRooms: 5,
     gender: "female",
     amenities: ["WiFi", "Breakfast", "Security Lockers"],
+    paranoma: {
+      "single-room":
+        "https://i.ibb.co/FbbPLNQ/shot-panoramic-composition-bedroom.jpg",
+      "double-room":
+        "https://i.ibb.co/5KyJj4Z/shot-panoramic-composition-bedroom-1.jpg",
+    },
   },
   {
     name: "East End",
@@ -186,6 +223,12 @@ export const hostelsdata = [
     availableRooms: 3,
     gender: "mixed",
     amenities: ["WiFi", "Kitchen", "Laundry"],
+    paranoma: {
+      "single-room":
+        "https://i.ibb.co/FbbPLNQ/shot-panoramic-composition-bedroom.jpg",
+      "double-room":
+        "https://i.ibb.co/5KyJj4Z/shot-panoramic-composition-bedroom-1.jpg",
+    },
   },
   {
     name: "Heaven",
