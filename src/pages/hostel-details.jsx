@@ -100,31 +100,29 @@ const HostelDetails = ({ singlehostel }) => {
         {activeTab === "virtual-tour" && (
           <div className="virtual-tour">
             <h2>Virtual Room Tours</h2>
-            {/* <GoogleVRViewer image="https://storage.googleapis.com/vrview/examples/coral.jpg" /> */}
-            {hostel.rooms.map((room) => (
-              <div key={room.id} className="room-tour">
-                <h3>{room.name}</h3>
-                {/* from panelllum */}
-                {/* <iframe
-                  width="600"
-                  height="400"
-                  allowfullscreen
-                  style="border-style:none;"
-                  src="https://cdn.pannellum.org/2.5/pannellum.htm#panorama=https%3A//i.ibb.co/4Sk47Z1/shot-panoramic-composition-living-room-2-1.jpg&title=Hostel"
-                ></iframe> */}
-                {/* from render stuff online */}
-                <iframe
-                  width="900"
-                  height="700"
-                  title="Hostel "
-                  scrolling="no"
-                  // src="https://renderstuff.com/tools/360-panorama-web-viewer-embed/?image=https://i.ibb.co/BffgNHH/shot-panoramic-composition-living-room-23-2150315646.jpg"
-                  src="https://renderstuff.com/tools/360-panorama-web-viewer-embed/?image=https://i.ibb.co/4Sk47Z1/shot-panoramic-composition-living-room-2-1.jpg"
-                ></iframe>
-                {/* Using Google VR Viewer for each room */}
-                {/* <GoogleVRViewer image="https://storage.googleapis.com/vrview/examples/coral.jpg" /> */}
+            {singlehostel?.paranoma ? (
+              <div className="room-tours">
+                {Object.entries(singlehostel.paranoma).map(
+                  ([roomType, url]) => (
+                    <div key={roomType} className="room-tour">
+                      <h3>{roomType.replace("-", " ").toUpperCase()}</h3>
+                      <iframe
+                        width="600"
+                        height="400"
+                        allowFullScreen
+                        src={`https://cdn.pannellum.org/2.5/pannellum.htm#panorama=${encodeURIComponent(
+                          url
+                        )}&title=${encodeURIComponent(
+                          singlehostel.name
+                        )} Hostel`}
+                      ></iframe>
+                    </div>
+                  )
+                )}
               </div>
-            ))}
+            ) : (
+              <p>No panorama available for this hostel.</p>
+            )}
           </div>
         )}
 
