@@ -39,7 +39,7 @@ export const hostelsdata = [
     amenities: ["WiFi", "Kitchen", "Laundry"],
     paranoma: {
       "single-room":
-        "https://i.ibb.co/sWBsnR8/shot-panoramic-composition-living-room.jpg",
+        "https://i.ibb.co/92W1QF3/shot-panoramic-composition-living-room-1.jpg",
       "double-room":
         "https://i.ibb.co/5KyJj4Z/shot-panoramic-composition-bedroom-1.jpg",
     },
