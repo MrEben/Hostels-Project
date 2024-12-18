@@ -114,8 +114,8 @@ const HostelDetails = ({ singlehostel }) => {
                           url
                         )}&title=${encodeURIComponent(
                           singlehostel.name
-                        )} Hostel`}
-                      ></iframe>
+                        )} Hostel&autoRotate=2`}
+                      />
                     </div>
                   )
                 )}
