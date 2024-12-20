@@ -592,11 +592,12 @@ input[type="text"] {
 }
 
 .overview-content,
-.virtual-tour,
 .reviews-section {
   padding: 24px;
 }
-
+.virtual-tour {
+  padding: 10px;
+}
 .info-section h2 {
   font-size: 24px;
   margin-bottom: 16px;
