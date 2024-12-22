@@ -17,8 +17,10 @@ const Gallery = () => {
           return (
             <div className="gallery-innerbox" key={index}>
               <img src={item.image} alt="" />
-              <div className="inner-text">
+              <div className="hostel-name">
                 <h4>{item.name}</h4>
+              </div>
+              <div className="inner-text">
                 <Link to={`/item/${item.name}`} className="single-item btn">
                   Open <FaOpencart />
                 </Link>
