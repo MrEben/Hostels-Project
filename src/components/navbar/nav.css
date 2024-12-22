@@ -15,11 +15,12 @@
 }
 .nav-bar .logo {
   display: flex;
+  gap: 0.3rem;
   align-items: center;
   color: var(--clr-white);
 }
-.nav-bar .logo {
-  display: flex;
+.nav-bar .logo svg {
+  font-size: 1.7rem;
 }
 .nav-bar .logo h2 {
   font-weight: 700;

@@ -7,7 +7,7 @@ import {
   AiFillAccountBook,
   // AiFillBook,
 } from "react-icons/ai";
-import { FaCartPlus } from "react-icons/fa";
+import { FaCartPlus, FaHome } from "react-icons/fa";
 import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
@@ -16,7 +16,7 @@ const Navbar = () => {
         <div className="nav-bar">
           <ul>
             <Link to="/" className="logo">
-              {/* <BsCodeSlash /> */}
+              <FaHome />
               <h2>
                 Busy<span className="danger">Dev</span>
               </h2>
