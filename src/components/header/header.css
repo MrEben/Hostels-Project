@@ -48,7 +48,6 @@ header .header-right svg {
 header .header-right h1 {
   letter-spacing: 1px;
   font-size: 3.5rem;
-  animation: slideInFromTop 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   font-weight: 900;
 }
 
@@ -81,14 +80,7 @@ header .header-right h1 {
 .booking-page h1 {
   font-size: 5rem;
 }
-@keyframes slideInFromLeft {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
+
 header .header-right span {
   color: var(--clr-dark-blue);
 }

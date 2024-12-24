@@ -11,6 +11,7 @@ import { useSwiper } from "swiper/react";
 import { hostelsdata } from "../data";
 import BookingPanel from "../ui/bookingpanel";
 import { Link } from "react-router-dom";
+import RevealOnScroll from "../ui/RevealOnScroll";
 
 const swiperParams = {
   modules: [Autoplay, Navigation, Pagination],
@@ -42,7 +43,9 @@ const Header = () => {
               return (
                 <SwiperSlide key={index}>
                   <div>
-                    <img src={image} alt="" />
+                    <RevealOnScroll>
+                      <img src={image} alt="" />
+                    </RevealOnScroll>
                     <div className="text">
                       <h3>{name} Hostel</h3>
                       <h4>{ratings}</h4>
@@ -57,9 +60,11 @@ const Header = () => {
 
         <div className="header-right">
           <AiFillCode />
-          <h1>
-            We provide you with <span>exclusive hostels</span>
-          </h1>
+          <RevealOnScroll>
+            <h1>
+              We provide you with <span>exclusive hostels</span>
+            </h1>
+          </RevealOnScroll>
           <p>
             Visit our array of unique and exclusive hoastels which provide you
             with accomodation at affordable rates. We are a proud and verified

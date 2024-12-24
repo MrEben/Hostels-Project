@@ -78,7 +78,7 @@ const HostelDetails = ({ singlehostel }) => {
             className={`tab ${activeTab === "virtual-tour" ? "active" : ""}`}
             onClick={() => setActiveTab("virtual-tour")}
           >
-            Virtual Tour
+            Virtual Tour <span className="newBadge">NEW</span>
           </button>
           <button
             className={`tab ${activeTab === "reviews" ? "active" : ""}`}

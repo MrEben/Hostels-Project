@@ -114,6 +114,7 @@
 .user-info small {
   color: #545d7a;
 }
+
 .items-page .packages .packages-head {
   margin: 2rem 0 1rem 1rem;
 }
@@ -183,8 +184,6 @@
   background: #34495e;
   display: flex;
   justify-content: center;
-  animation: fadein 5s;
-  animation-fill-mode: forwards;
 }
 
 .model {
@@ -196,8 +195,6 @@
   position: relative;
   display: flex;
   flex-direction: row;
-  animation: slideInFromTop 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  animation-fill-mode: forwards;
 }
 
 .room {
@@ -221,39 +218,8 @@
   animation-fill-mode: forwards;
 }
 
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 label {
   display: block;
-}
-
-/* .model:after {
-  width: 30px;
-  content: "X";
-  height: 30px;
-  color: black;
-  position: absolute;
-  text-align: center;
-  padding-top: 3px;
-  top: 0;
-  right: -30px;
-  background-color: #bdc3c7;
-} */
-
-@keyframes slideInFromTop {
-  0% {
-    transform: translateY(-100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
 }
 
 .text-cover {
@@ -343,6 +309,43 @@ input[type="text"] {
   margin: auto;
   margin-top: 4.5rem;
   padding: 24px;
+}
+/* More Filters Button */
+.more-filters-button {
+  padding: 8px 16px;
+  background: #4b5563;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-weight: 500;
+}
+
+.more-filters-button:hover {
+  background: #374151;
+}
+
+.more-filters-button:focus {
+  outline: none;
+}
+
+/* More Filters Submenu */
+.more-filters {
+  margin-top: 16px;
+  background: #f9fafb;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.more-filter-select {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  min-width: 120px;
+  background: white;
+  margin-bottom: 12px;
 }
 
 .filters-section {
@@ -443,7 +446,7 @@ input[type="text"] {
 .no-results p {
   color: #666;
 }
-
+/* HOSTEL DETAILS PAGE */
 .hostel-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -594,6 +597,14 @@ input[type="text"] {
 .overview-content,
 .reviews-section {
   padding: 24px;
+}
+.newBadge {
+  margin-left: 8px;
+  background-color: #22c55e;
+  color: white;
+  padding: 0.23rem;
+  border-radius: 4px;
+  font-size: 12px;
 }
 .virtual-tour {
   padding: 10px;
