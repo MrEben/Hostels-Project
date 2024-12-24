@@ -68,7 +68,7 @@
 @media screen and (max-width: 600px) {
   .nav-bar {
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 1rem;
   }
 
   .nav-bar .app-links > div {
