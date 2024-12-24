@@ -2,68 +2,33 @@ import React, { useState, useEffect, useRef } from "react";
 import { FaWifi, FaUser, FaCoffee, FaClock } from "react-icons/fa";
 import Img from "../assets/empty-room-without-furniture-full-seamless-spherical-hdri-panorama-360-degrees-interior-white-loft-r.png";
 import "./item.css";
-
-// Google VR Viewer Component
-// const GoogleVRViewer = ({ image }) => {
-//   const vrViewRef = useRef(null);
-
-//   useEffect(() => {
-//     if (vrViewRef.current) {
-//       // Use the element's ID as a CSS selector string instead of passing the DOM element directly
-//       new VRView.Player(`#${vrViewRef.current.id}`, {
-//         image: image, // Path to your 360° image
-//         width: "100%", // Full width
-//         height: "500px", // Fixed height
-//         is_stereo: false, // Set to true if using a stereo image
-//       });
-//     }
-//   }, [image]);
-
-//   return (
-//     <div>
-//       <h2>360° Panorama Viewer</h2>
-//       <div
-//         id="vr-view-container"
-//         ref={vrViewRef}
-//         style={{ width: "100%", height: "500px" }}
-//       ></div>
-//     </div>
-//   );
-// };
+import "leaflet/dist/leaflet.css";
+import L from "leaflet";
 
 const HostelDetails = ({ singlehostel }) => {
   const [activeTab, setActiveTab] = useState("overview");
+  const mapRef = useRef(null);
 
-  // Sample hostel data
-  const hostel = {
-    id: 1,
-    name: "Sunny Side Hostel",
-    location: "123 Downtown Street, City Center",
-    price: 450,
-    rating: 4.5,
-    reviews: 128,
-    description:
-      "Experience comfort and convenience at Sunny Side Hostel. Located in the heart of downtown, we offer modern amenities and a vibrant community atmosphere perfect for long-term stays.",
-    amenities: [
-      { name: "Free WiFi", icon: <FaWifi className="amenity-icon" /> },
-      { name: "24/7 Reception", icon: <FaClock className="amenity-icon" /> },
-      { name: "Common Kitchen", icon: <FaCoffee className="amenity-icon" /> },
-      { name: "Community Areas", icon: <FaUser className="amenity-icon" /> },
-    ],
-    rooms: [
-      {
-        id: 1,
-        name: "Single Room",
-        panoramaUrl: Img, // Replace with actual panorama image
-      },
-      {
-        id: 2,
-        name: "Double Room",
-        panoramaUrl: "/api/placeholder/800/400", // Replace with actual panorama image
-      },
-    ],
-  };
+  useEffect(() => {
+    if (mapRef.current) {
+      const map = L.map(mapRef.current).setView(
+        singlehostel?.coordinates || [6.6929, -1.5646], // Default to London if no coordinates
+        13
+      );
 
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        attribution:
+          '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+      }).addTo(map);
+
+      L.marker(singlehostel?.coordinates || [6.6929, -1.5646])
+        .addTo(map)
+        .bindPopup(`<b>${singlehostel?.name}</b><br>${singlehostel?.location}`)
+        .openPopup();
+
+      return () => map.remove(); // Cleanup map instance on component unmount
+    }
+  }, [singlehostel]);
   return (
     <div className="single-hostel-details">
       <div className="content-wrapper">
@@ -87,12 +52,19 @@ const HostelDetails = ({ singlehostel }) => {
             Reviews
           </button>
         </nav>
-
         {activeTab === "overview" && (
           <div className="overview-content">
             <div className="info-section">
               <h2>About this Hostel</h2>
               <p>{singlehostel?.description}</p>
+            </div>
+            <div className="map-section">
+              <h2>Locate this Hostel</h2>
+              <div
+                id="map"
+                ref={mapRef}
+                style={{ width: "100%", height: "400px", borderRadius: "8px" }}
+              ></div>
             </div>
           </div>
         )}
@@ -129,7 +101,36 @@ const HostelDetails = ({ singlehostel }) => {
         {activeTab === "reviews" && (
           <div className="reviews-section">
             <h2>Guest Reviews</h2>
-            {/* Reviews content */}
+            <div className="review">
+              <p className="review-text">
+                "The hostel is amazing! The staff were super friendly, and the
+                rooms were clean and comfortable. The location is perfect for
+                students. Highly recommended!"
+              </p>
+              <p className="review-author">- Akosua B.</p>
+            </div>
+            <div className="review">
+              <p className="review-text">
+                "Affordable and well-maintained. I loved the common kitchen and
+                the free Wi-Fi. A great place for anyone staying in Kumasi."
+              </p>
+              <p className="review-author">- Kwame O.</p>
+            </div>
+            <div className="review">
+              <p className="review-text">
+                "The hostel exceeded my expectations! The amenities were
+                top-notch, and the atmosphere was really welcoming."
+              </p>
+              <p className="review-author">- Nana A.</p>
+            </div>
+            <div className="review">
+              <p className="review-text">
+                "I stayed here for six months, and it was a great experience.
+                The staff were always available to help, and the security was
+                excellent."
+              </p>
+              <p className="review-author">- Yaa K.</p>
+            </div>
           </div>
         )}
       </div>

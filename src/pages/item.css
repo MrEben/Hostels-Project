@@ -628,6 +628,77 @@ iframe {
   aspect-ratio: 3 / 2; /* Maintains aspect ratio of 600x400 */
   margin: 0 auto; /* Center the iframe horizontally */
 }
+/* Reviews Section */
+.reviews-section {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.reviews-section h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Individual Review */
+.review {
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.review-text {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.review-author {
+  font-size: 14px;
+  color: #777;
+  font-style: italic;
+}
+
+/*  Styling for quotes */
+.review-text::before {
+  content: "“";
+  font-size: 30px;
+  color: #4caf50;
+  margin-right: 10px;
+}
+
+.review-text::after {
+  content: "”";
+  font-size: 30px;
+  color: #4caf50;
+  margin-left: 10px;
+}
+
+/* Responsiveness for reviews section*/
+@media (max-width: 768px) {
+  .reviews-section {
+    padding: 15px;
+  }
+
+  .review {
+    padding: 12px;
+  }
+
+  .review-text {
+    font-size: 14px;
+  }
+
+  .review-author {
+    font-size: 12px;
+  }
+}
 
 /* Responsive styles */
 @media (max-width: 768px) {
