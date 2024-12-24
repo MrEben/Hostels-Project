@@ -47,6 +47,17 @@
   width: 60%;
   border-radius: 2rem;
 }
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 @media screen and (max-width: 768px) {
   .card-ui {
     grid-template-columns: 1fr;
@@ -64,7 +75,7 @@
     position: relative;
   }
   .card-ui .heading {
-    z-index: 99;
+    z-index: 9999;
   }
   .card-ui .card-image img {
     position: absolute;
@@ -73,7 +84,7 @@
     height: 100%;
     width: 100%;
     border-radius: 0;
-    z-index: 2;
+    z-index: -2;
     opacity: 45%;
   }
 }
